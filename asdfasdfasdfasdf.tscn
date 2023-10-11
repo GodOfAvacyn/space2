@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://7yufg68u3evs"]
+
+[ext_resource type="Shader" path="res://new_shader.gdshader" id="1_ul502"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_hei88"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fkc3h"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q05gg"]
+render_priority = 0
+next_pass = SubResource("StandardMaterial3D_fkc3h")
+shader = ExtResource("1_ul502")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.852184, 0.523242, 0, -0.523242, 0.852184, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_hei88")
+surface_material_override/0 = SubResource("ShaderMaterial_q05gg")
